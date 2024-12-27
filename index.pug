@@ -6,6 +6,22 @@ html(lang="ja")
     title Masonry Layout JavaScript
     link(rel="stylesheet" href="style.css")
   body
+    h1 Masonry Layout JavaScript
+    p Implemented using vanilla JavaScript without using jQuery
+
+    .reload-button__wrap
+      button.reload-button
+        |ランダムリロード
+
+    .wrap
+      .masonry
+        - for (var i = 0; i < 20; i++)
+          .masonry-item.c-card
+            - const random_height = Math.floor(Math.random() * (600 - 200 + 1)) + 200;
+            .c-card__img
+              img(src=`https://picsum.photos/400/${random_height}?random=${i}`, alt="")
+            .c-card__title
+              |title!{i+1}
 
 
     script(src="main.js")
