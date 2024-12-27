@@ -19,9 +19,9 @@ class Masonry {
     this.updateColumns();
   }
   updateColumns() {
-    if (this.elWidth >= 1200) {
+    if (this.elWidth >= 1000) {
       this.columns = 4;
-    } else if (this.elWidth >= 900) {
+    } else if (this.elWidth >= 700) {
       this.columns = 3;
     } else if (this.elWidth >= 568) {
       this.columns = 2;
@@ -89,4 +89,3 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 })
-
